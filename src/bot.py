@@ -32,7 +32,8 @@ async def command_start_handler(message: Message) -> None:
 @dp.message_handler(content_types=['text'])
 async def answer_handler(message: Message) -> None:
     """
-    Handler get {item_id} and {search_query}
+    Handler get {item_id search_query}for single search
+    OR {item_id/item_id/... search_query} for multy search
     """
     logger.info(f'User {message.from_user.full_name}, search {message.text}')
     logger.info(message.text)
