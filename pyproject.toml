@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "wild-bot"
+version = "0.1.0"
+description = ""
+authors = ["romanlosev <losik19-94@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "wild_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = "^2.23.1"
+requests = "^2.28.1"
+loguru = "^0.6.0"
+isort = "^5.10.1"
+python-dotenv = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

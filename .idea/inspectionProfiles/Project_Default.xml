@@ -1,0 +1,73 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="align" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="18">
+            <item index="0" class="java.lang.String" itemvalue="XlsxWriter" />
+            <item index="1" class="java.lang.String" itemvalue="xlrd" />
+            <item index="2" class="java.lang.String" itemvalue="loguru" />
+            <item index="3" class="java.lang.String" itemvalue="aioconsole" />
+            <item index="4" class="java.lang.String" itemvalue="fastapi" />
+            <item index="5" class="java.lang.String" itemvalue="pydantic" />
+            <item index="6" class="java.lang.String" itemvalue="orjson" />
+            <item index="7" class="java.lang.String" itemvalue="uvicorn" />
+            <item index="8" class="java.lang.String" itemvalue="uvloop" />
+            <item index="9" class="java.lang.String" itemvalue="dotenv" />
+            <item index="10" class="java.lang.String" itemvalue="django" />
+            <item index="11" class="java.lang.String" itemvalue="pillow" />
+            <item index="12" class="java.lang.String" itemvalue="asgiref" />
+            <item index="13" class="java.lang.String" itemvalue="setuptools" />
+            <item index="14" class="java.lang.String" itemvalue="sorl-thumbnail" />
+            <item index="15" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="16" class="java.lang.String" itemvalue="sqlparse" />
+            <item index="17" class="java.lang.String" itemvalue="stripe" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E722" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+          <option value="zip" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="payment_page.payment_page.urls.items" />
+          <option value="ssl._create_unverified_context" />
+          <option value="src.migrations.env.db" />
+          <option value="src.db.db.core" />
+          <option value="src.core.config.core" />
+          <option value="items.models.Item.objects" />
+          <option value="items.models.StripePrice.objects" />
+          <option value="items.models.ItemInOrder.objects" />
+          <option value="items.models.Order.objects" />
+          <option value="order.models.ItemInOrder.objects" />
+          <option value="order.models.Order.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
