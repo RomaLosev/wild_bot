@@ -14,6 +14,12 @@ TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 bot = Bot(token=TELEGRAM_TOKEN)
 dp = Dispatcher(bot)
 finder = Finder()
+VALUE_ERROR = (
+    'Неправильный запрос.\n'
+    'Ожидается <артикул> <запрос>\n'
+    'Например: 37260674 Омега 3 (для одиночного поиска)\n'
+    '74788280/74778293 велосипед (для поиска нескольких артикулов)'
+)
 
 logger.add("logger_bot.log", enqueue=True)
 
@@ -26,7 +32,9 @@ async def command_start_handler(message: Message) -> None:
     logger.info(f'User {message.from_user.full_name}, started bot ')
     await message.answer(f' Привет, {message.from_user.full_name}!\n'
                          'Посмотрим где там твой товар?)\n'
-                         'Запрос в формате "Артикул поисковый запроc"')
+                         'Запрос в формате <артикул> <запрос>\n'
+                         'Например: 37260674 Омега 3 (для одиночного поиска)\n'
+                         '74788280/74778293 велосипед (для поиска нескольких артикулов)')
 
 
 @dp.message_handler(content_types=['text'])
@@ -41,8 +49,8 @@ async def answer_handler(message: Message) -> None:
         result = finder.main(message.text)
         await message.answer(text=result)
     except ValueError as error:
-        logger.error(f'Error: {error}')
-        await message.answer(text='Неправильный запрос')
+        logger.error(error)
+        await message.answer(text=VALUE_ERROR)
 
 
 if __name__ == '__main__':

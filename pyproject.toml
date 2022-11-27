@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["romanlosev <losik19-94@yandex.ru>"]
 readme = "README.md"
-packages = [{include = "wild_bot"}]
+#packages = [{include = "wild_bot"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
